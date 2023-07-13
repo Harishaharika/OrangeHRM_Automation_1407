@@ -1,0 +1,940 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Report Demo</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Test Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 7, 2023 09:24:00 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Login</a><a class="dropdown-item" href="#">EmployeeList</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag="Login"
+          device="">
+          <div class="test-detail">
+            <p class="name">loginWithValidCredentials</p>
+            <p class="text-sm">
+              <span>9:24:03 AM</span> / <span>00:00:08:138</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">loginWithValidCredentials</h5>
+<span class='badge badge-success'>07.07.2023 9:24:03 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:11 AM</span>
+<span class='badge badge-default'>00:00:08:138</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Login</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:05 AM</td>
+        <td>
+          Enter Username: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:05 AM</td>
+        <td>
+          Enter Password: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:11 AM</td>
+        <td>
+          Click on Login 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:24:11 AM</td>
+        <td>
+          Verify Welcome Message<b><font color=red><br> Expected value : Welcome Admin1.<br> Actual value : Welcome Admin.</font><b><br>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\loginWithValidCredentials_1688702051292.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\loginWithValidCredentials_1688702051292.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag="Login"
+          device="">
+          <div class="test-detail">
+            <p class="name">loginWithInvalidCredentials</p>
+            <p class="text-sm">
+              <span>9:24:03 AM</span> / <span>00:00:05:326</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">loginWithInvalidCredentials</h5>
+<span class='badge badge-success'>07.07.2023 9:24:03 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:08 AM</span>
+<span class='badge badge-default'>00:00:05:326</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Login</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:05 AM</td>
+        <td>
+          Enter Username: dshfdshgds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:05 AM</td>
+        <td>
+          Enter Password: SSASA
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:08 AM</td>
+        <td>
+          Click on Login 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:24:08 AM</td>
+        <td>
+          Verify Login Error Message<b><font color=green><br> Expected value : Invalid credentials.<br> Actual value : Invalid credentials.</font><b><br>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\loginWithInvalidCredentials_1688702048544.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\loginWithInvalidCredentials_1688702048544.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author=""
+          tag="Login"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifySocialMediaLinks</p>
+            <p class="text-sm">
+              <span>9:24:04 AM</span> / <span>00:00:11:001</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifySocialMediaLinks</h5>
+<span class='badge badge-success'>07.07.2023 9:24:04 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:15 AM</span>
+<span class='badge badge-default'>00:00:11:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Login</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:24:15 AM</td>
+        <td>
+          Verify URLS<BR> Expected: [https://www.linkedin.com, https://www.facebook.com/OrangeHRM, https://twitter.com/i/flow/login?redirect_after_login=%2Forangehrm, 
+https://www.youtube.com/results?search_query=orangehrm, search_type=]<BR>Actual: [https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fgroups%3Fhome%3D%26gid%3D891077&trk=login_reg_redirect, https://www.facebook.com/OrangeHRM, https://twitter.com/i/flow/login?redirect_after_login=%2Forangehrm, https://www.youtube.com/results?search_query=orangehrm]
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifySocialMediaLinks_1688702055312.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifySocialMediaLinks_1688702055312.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag="Login"
+          device="">
+          <div class="test-detail">
+            <p class="name">loginWithBlankPassword</p>
+            <p class="text-sm">
+              <span>9:24:04 AM</span> / <span>00:00:03:000</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">loginWithBlankPassword</h5>
+<span class='badge badge-success'>07.07.2023 9:24:04 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:07 AM</span>
+<span class='badge badge-default'>00:00:03:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Login</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:06 AM</td>
+        <td>
+          Enter Username: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:07 AM</td>
+        <td>
+          Enter Password: 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:07 AM</td>
+        <td>
+          Click on Login 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:24:07 AM</td>
+        <td>
+          Verify Login Error Message<b><font color=red><br> Expected value : Password cannot be empty1.<br> Actual value : Password cannot be empty.</font><b><br>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\loginWithBlankPassword_1688702047312.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\loginWithBlankPassword_1688702047312.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag="Login"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyCopyRightFooterText</p>
+            <p class="text-sm">
+              <span>9:24:04 AM</span> / <span>00:00:02:599</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyCopyRightFooterText</h5>
+<span class='badge badge-success'>07.07.2023 9:24:04 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:06 AM</span>
+<span class='badge badge-default'>00:00:02:599</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Login</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:24:06 AM</td>
+        <td>
+          Verify Footer Message<b><font color=green><br> Expected value : OrangeHRM ver 3.0.1 © OrangeHRM Inc. 2005 - 2023 All rights reserved..<br> Actual value : OrangeHRM ver 3.0.1 © OrangeHRM Inc. 2005 - 2023 All rights reserved..</font><b><br>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyCopyRightFooterText_1688702046904.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyCopyRightFooterText_1688702046904.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag="EmployeeList"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyEditEmployee</p>
+            <p class="text-sm">
+              <span>9:24:17 AM</span> / <span>00:00:54:874</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyEditEmployee</h5>
+<span class='badge badge-success'>07.07.2023 9:24:17 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:25:12 AM</span>
+<span class='badge badge-default'>00:00:54:874</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">EmployeeList</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:19 AM</td>
+        <td>
+          Enter Username: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:19 AM</td>
+        <td>
+          Enter Password: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:25 AM</td>
+        <td>
+          Click on Login 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:45 AM</td>
+        <td>
+          Navigate To Employee List Page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:24:45 AM</td>
+        <td>
+          Verify Employee Record<BR> Expected: true<BR>Actual: true
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyEditEmployee_1688702085606.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyEditEmployee_1688702085606.png">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:52 AM</td>
+        <td>
+          Click On Edit Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:52 AM</td>
+        <td>
+          Clear Text Box , Enter First Name As: VishnuEdited
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:53 AM</td>
+        <td>
+          Clear Text Box , Enter Last Name As: ReddyEdited
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:04 AM</td>
+        <td>
+          Click On Save Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:25:11 AM</td>
+        <td>
+          Navigate To Employee List Page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:25:12 AM</td>
+        <td>
+          Verify Employee detailed after updating<BR> Expected: [VishnuEdited, ReddyEdited]<BR>Actual: [VishnuEdited, ReddyEdited]
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyEditEmployee_1688702112008.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyEditEmployee_1688702112008.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag="EmployeeList"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyAddEmployee</p>
+            <p class="text-sm">
+              <span>9:24:17 AM</span> / <span>00:00:21:619</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyAddEmployee</h5>
+<span class='badge badge-success'>07.07.2023 9:24:17 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:39 AM</span>
+<span class='badge badge-default'>00:00:21:619</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">EmployeeList</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:19 AM</td>
+        <td>
+          Enter Username: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:19 AM</td>
+        <td>
+          Enter Password: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:25 AM</td>
+        <td>
+          Click on Login 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:38 AM</td>
+        <td>
+          Navigate To Employee List Page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:24:39 AM</td>
+        <td>
+          Verify Employee Record<BR> Expected: true<BR>Actual: true
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyAddEmployee_1688702079005.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyAddEmployee_1688702079005.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag="EmployeeList"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyDeleteEmployee</p>
+            <p class="text-sm">
+              <span>9:24:17 AM</span> / <span>00:00:21:847</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyDeleteEmployee</h5>
+<span class='badge badge-success'>07.07.2023 9:24:17 AM</span>
+<span class='badge badge-danger'>07.07.2023 9:24:39 AM</span>
+<span class='badge badge-default'>00:00:21:847</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">EmployeeList</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:20 AM</td>
+        <td>
+          Enter Username: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:20 AM</td>
+        <td>
+          Enter Password: Admin
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:25 AM</td>
+        <td>
+          Click on Login 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:24:38 AM</td>
+        <td>
+          Navigate To Employee List Page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:24:39 AM</td>
+        <td>
+          Verify Employee Record<BR> Expected: true<BR>Actual: true
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyDeleteEmployee_1688702079373.png' src="D:\Daily Classes\LTPT_1407\Automation\CodeBase\GITWorkSpace\Sai\SaiBranch\OrangeHRM_Automation_1407\OrangeHRM_Automation\images\verifyDeleteEmployee_1688702079373.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">Login</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Login</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:24:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>loginWithValidCredentials</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:24:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>loginWithInvalidCredentials</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:24:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>verifySocialMediaLinks</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:24:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>loginWithBlankPassword</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:24:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>verifyCopyRightFooterText</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">EmployeeList</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>EmployeeList</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:24:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>verifyEditEmployee</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:24:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>verifyAddEmployee</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:24:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>verifyDeleteEmployee</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 7, 2023 09:24:00 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 7, 2023 09:25:12 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>5</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='62%'>
+<b>5</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='37%'><b>3</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='17%'><b>6</b> events passed</small></div>
+<div>
+<small data-tooltip='8%'><b>3</b> events failed,
+<b data-tooltip='%'>26</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"loginWithValidCredentials":8.138,"loginWithInvalidCredentials":5.326,"verifySocialMediaLinks":11.001,"loginWithBlankPassword":3,"verifyCopyRightFooterText":2.599,"verifyEditEmployee":54.874,"verifyAddEmployee":21.619,"verifyDeleteEmployee":21.847
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Login</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>EmployeeList</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 5,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 6,
+failEvents: 3,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 26
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
